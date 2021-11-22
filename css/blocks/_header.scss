@@ -1,0 +1,50 @@
+/** header **/
+.header {
+    background: $color-white;
+    box-shadow: $box-shadow;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+    }
+
+    &__logo {
+
+    }
+
+    &__nav {
+        display: flex;
+        margin-right: 20px;
+        margin-left: auto;
+
+        &-item {
+            margin-right: 20px;
+
+            &__arrow::after {
+                content: url(../image/icons/arrow_down.png);
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__link-enter {
+        @include font_12;
+        text-transform: uppercase;
+        color: $color-purple;
+        border-radius: 22px;
+        padding: 10px 20px;
+        border: 2px solid $color-purple;
+        margin-right: 20px;
+    }
+
+    &__link-registration {
+        @include font_12;
+        text-transform: uppercase;
+        color: $color-white;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+        border-radius: 22px;
+        padding: 10px 20px;
+    }
+}
