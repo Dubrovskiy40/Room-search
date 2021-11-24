@@ -1,7 +1,6 @@
 /** footer **/
 .footer {
     
-
     &-main {
         display: flex;
         justify-content: space-between;
@@ -10,7 +9,7 @@
 
         &__text {
             @include font_14;
-            color: rgba(31, 32, 65, 0.75);
+            color: $color-rgba5;
             max-width: 260px;
             margin-top: 20px;
             margin-right: 40px;
@@ -31,23 +30,33 @@
             margin-bottom: 21px;
         }
 
-        &__item {
-            @include font_14-2;
-            color: rgba(31, 32, 65, 0.5);
-
-            &:not(last-child) {
+        &__item:not(:last-child) {
                 margin-bottom: 20px;
-            }
         }
 
         &__inp {
             background: $color-white;
-            border: 1px solid rgba(31, 32, 65, 0.25);
+            border: 1px solid $color-rgba4;
             box-sizing: border-box;
             border-radius: 4px;
             @include font_14;
-            color: rgba(31, 32, 65, 0.25);
-            padding: 12px 0 8px 15px;
+            color: $color-rgba4;
+            padding: 12px 44px 8px 15px;
+            
+            width: 100%;
+        }
+
+        &__inp-wrap {
+            position: relative;
+        }
+
+        &__btn {
+            position: absolute;
+            background-color: $color-white;
+            padding: 11px 12px;
+            top: 0;
+            right: 1px;
+            margin: 1px;
         }
     }
 
@@ -58,7 +67,7 @@
 
         &__text {
             @include font_14-2;
-            color: rgba(31, 32, 65, 0.75);
+            color: $color-rgba5;
         }
 
         &__social-network {

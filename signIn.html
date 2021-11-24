@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-      <title>Sign in</title>
-  </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <title>Sign in</title>
+    </head>
 <body>
-   <header class="header">
-      <div class="container">
-          <div class="header__wrap">
-              <a href="#">
-                  <img class="header__logo" src="./image/Logo.png" alt="logo">
-              </a>
-              <ul class="header__nav">
-                  <li class="header__nav-item">О нас</li>
-                  <li class="header__nav-item nav-item__arrow">Услуги</li>
-                  <li class="header__nav-item">Вакансии</li>
-                  <li class="header__nav-item">Новости</li>
-                  <li class="header__nav-item nav-item__arrow">Соглашения</li>
-              </ul>
-              <div>
-                  <a class="header__link-enter" href="#">войти</a>
-                  <a class="header__link-registration" href="#">зарегистрироваться</a>
-              </div>
-          </div>
-      </div>
-  </header>
-  <main class="sign">
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <a href="#">
+                    <img class="header__logo" src="./image/Logo.png" alt="logo">
+                </a>
+                <div class="header__nav">
+                    <a href=""# class="header__nav-link text">О нас</a>
+                    <div class="header__dropdown">
+                        <a href=""# class="header__nav-link header__dropdown-link nav-link__arrow text">Услуги</a>
+                        <div class="header__dropdown-content">
+                            <a class="header__nav-link text" href="#">Услуги1</a>
+                            <a class="header__nav-link text" href="#">Услуги2</a>
+                            <a class="header__nav-link text" href="#">Услуги3</a>
+                        </div>
+                    </div>
+                    <a href=""# class="header__nav-link text">Вакансии</a>
+                    <a href=""# class="header__nav-link text">Новости</a>
+                    <div class="header__dropdown">
+                        <a href=""# class="header__nav-link header__dropdown-link nav-link__arrow text">Соглашения</a>
+                        <div class="header__dropdown-content">
+                            <a class="header__nav-link text" href="#">Соглашения1</a>
+                            <a class="header__nav-link text" href="#">Соглашения2</a>
+                            <a class="header__nav-link text" href="#">Соглашения3</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a class="header__link-enter btn__enter" href="#">войти</a>
+                    <a class="header__link-registration" href="#">зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="sign">
     <div class="container">
         <form action="" class="sign__form">
-           <h2 class="sign__title">Войти</h2>
+           <h2 class="sign__title form__title">Войти</h2>
            <input class="sign__inp input_form" type="email" name="" id="reg" placeholder="Email" required>
            <input class="sign__inp input_form" type="password" name="" id="reg" placeholder="Пароль" required>
-           <button class="sign__btn">войти
-               <img class="main__form-btn-arrow" src="./image/icons/arrow_forward.png" alt="arrow">
+           <button class="sign__btn form__btn">войти
+               <img class="main__form-btn-arrow form__btn-arrow" src="./image/icons/arrow_forward.png" alt="arrow">
            </button>
            <div class="sign__bottom-wrap">
               <span class="sign__span">Нет аккаунта на Toxin?</span>
-              <a class="sign__enter" href="#index.html">создать</a>
+              <a class="sign__enter btn__enter" href="#index.html">создать</a>
            </div>
         </form>
      </div>
@@ -77,7 +91,10 @@
               <div class="footer-main__subs">
                   <h3 class="footer-main__heading">Подписка</h3>
                   <p class="footer-main__item">Получайте специальные предложения и новости сервиса</p>
-                  <input class="footer-main__inp" type="email" name="" id="" placeholder="Email" required>
+                  <div class="footer-main__inp-wrap">
+                    <input class="footer-main__inp" type="email" placeholder="Email" required>
+                    <button class="footer-main__btn"><img src="./image/icons/arrow_forward_v.png" alt="img"></button>
+                </div>
               </div>
           </div>
           <div class="footer-bottom">

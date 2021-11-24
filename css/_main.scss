@@ -22,6 +22,21 @@ button {
     margin: 0 auto;
 }
 
+
+
+.text {
+    @include font_14-2;
+    color: $color-rgba6;
+}
+
+
+
+.form__title {
+    @include font_24;
+    color: $color-dark_shade;
+    margin-bottom: 20px;
+}
+
 .input_title {
     @include font_12;
     text-transform: uppercase;
@@ -38,7 +53,30 @@ button {
     border-radius: 4px;
 }
 
-.text {
-    @include font_14-2;
-    color: $color-rgba5;
+.form__btn {
+    @include font_12;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+    border-radius: 22px;
+    padding: 14px 18px;
+    position: relative;
+
+    &-arrow {
+        position: absolute;
+        right: 10px;
+    }
+}
+
+.btn__enter {
+    @include font_12;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-purple;
+    background: $color-white;
+    border-radius: 22px;
+    border: 1px solid $color-rgba3;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px $color-rgba2;
 }

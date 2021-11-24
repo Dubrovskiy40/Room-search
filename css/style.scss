@@ -9,7 +9,7 @@
     padding: 70px 0 18px;
     background-image: url(../image/bgi_index.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 
     &__form {
         max-width: 380px;
@@ -22,12 +22,6 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 320px;
-
-        &-title {
-            @include font_24;
-            color: $color-dark_shade;
-            margin-bottom: 21px;
-        }
 
         &-inp-wrap {
             margin-bottom: 21px;
@@ -46,22 +40,6 @@
         &-select {
             padding: 11px 0 8px 15px;
             margin-bottom: 21px;
-        }
-
-        &-btn {
-            @include font_12;
-            text-align: center;
-            text-transform: uppercase;
-            color: $color-white;
-                background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
-            border-radius: 22px;
-            padding: 14px 18px;
-            position: relative;
-
-            &-arrow {
-                position: absolute;
-                right: 10px;
-            }
         }
     }
 
@@ -112,11 +90,11 @@
     }
 
     &__checkbox {
-        background: #FFFFFF;
-        border: 1px solid #BC9CFF;
+        background: $color-white;
+        border: 1px solid $color-purple;
         box-sizing: border-box;
         border-radius: 4px;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
     }
 }
 
@@ -141,7 +119,7 @@
 
 .card {
     background: $color-white;
-    box-shadow: 0px 10px 20px $box-shadow;
+    box-shadow: $box-shadow;
     border-radius: 4px;
 
     &__wrap-img {
@@ -166,12 +144,6 @@
         border-radius: 4px 4px 0px 0px;
     }
 
-    // &__img-count {
-    //     position: absolute;
-    //     top: 85%;
-    //     right: 5%;
-    // }
-
     &__slider-nav {
         position: absolute;
         top: 85%;
@@ -186,7 +158,7 @@
             border-radius: 50%;
             border: 1px solid $color-white;
 
-            &:not(last-child) {
+            &:not(:last-child) {
                 margin-right: 3px;
             }
 
@@ -195,8 +167,6 @@
             }
         }
     }
-
-
 
     &__description {
         padding-top: 20px;
@@ -220,11 +190,6 @@
         &-hide {
             display: none;
         }
-
-        &-price {
-            @include font_14-2;
-            color: $box-shadow;
-        }
     }
 
     &__hr {
@@ -244,9 +209,7 @@
         }
 
         &-count {
-            @include font_14-2;
             text-align: right;
-            color: $color-rgba;
         }
     }
 }
@@ -295,81 +258,129 @@
 
 
 /** room details **/
-.room-details__show {
-    background-image:
-        url(../image/roomDetails/bgi.png), 
-        url(../image/roomDetails/bgi2.png),
-        url(../image/roomDetails/bgi3.png);
-    background-position:center left, right top, right bottom;
-    background-repeat:no-repeat, no-repeat, no-repeat;
-    max-width: 1442px;
-    margin: 0 auto;
+.room-details {
+
+    &__image {
+        background-image:
+            url(../image/roomDetails/bgi.png), 
+            url(../image/roomDetails/bgi2.png),
+            url(../image/roomDetails/bgi3.png);
+        background-position:center left, right top, right bottom;
+        background-repeat:no-repeat, no-repeat, no-repeat;
+        max-width: 1442px;
+        margin: 0 auto;
+        height: fit-content;
+    }
+
+    &__content {
+        display: flex;
+        padding-top: 70px;
+    }
+}
+
+
+.container__room-info {
+    max-width: 711px;
 }
 
 .room-statistics {
-    padding-top: 70px;
     display: flex;
-    position: relative;
 
     &__info {
         display: flex;
         flex-direction: column;
     }
 
-    &__title {
+    &__header {
         @include font_19;
+    }
+
+    &__wrap {
+        position: relative;
+        padding: 23px 0 23px 58px;
+    }
+
+    &__title {
+        @include font_14;
+        font-weight: bold;
     }
 
     &__text {
         @include font_14;
-        margin-top: 23px;
 
-        &:not(last-child) {
+        &:not(:last-child) {
             margin-bottom: 17px;
         }
     }
+
+    &__diagram {
+        margin-left: auto;
+    }
+}
+
+.comfort, .convenience, .cosiness {
+    position: relative;
 }
 
 .comfort::before {
     content: url(../image/roomDetails/comfort.png);
     margin-right: 10px;
+    position: absolute;
+    top: 0;
+    left: -58px;
 } 
 .convenience::before {
     content: url(../image/roomDetails/convenience.png);
     margin-right: 10px;
+    position: absolute;
+    top: 0;
+    left: -58px;
 }
 .cosiness::before {
     content: url(../image/roomDetails/cosiness.png);
     margin-right: 10px;
+    position: absolute;
+    top: 0;
+    left: -58px;
 }
-
 
 
 .room-reserve {
     max-width: 380px;
     padding: 40px 30px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: $color-white;
+    border: 1px solid $color-rgba3;
     box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 25px $color-rgba2;
     border-radius: 4px;
-    position: absolute;
-    top: 10%;
-    right: 0;
+    margin-left: 70px;
     display: flex;
     flex-direction: column;
+    height: fit-content;
 }
 .reserve-order {
     display: flex;
     justify-content: space-between;
 }
-.reserve-order:not(last-child) {
+.reserve-order:not(:last-child) {
     margin-bottom: 10px;
 }
 .reserve-order > p, .reserve-order > span {
     @include font_14;
-    color: rgba(31, 32, 65, 0.75);
+    color: $color-rgba5;
 } 
+
+.service-fee__btn, .additional-fee__btn {
+    width: 20px;
+    height: 20px;
+    @include font_12;
+    color: $color-rgba4;
+    box-sizing: border-box;
+    border: 1px solid $color-rgba4;
+    border-radius: 50%;
+    margin: 0 auto 0 5px;
+}
+
 .total {
     display: flex;
     justify-content: space-between;
@@ -377,10 +388,137 @@
 }
 .total > span {
     @include font_19;
-    color: #1F2041;
+    color: $color-dark_shade;
 }
-.cost {
 
+
+.reviev-guests {
+    padding-bottom: 7px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @include font_19;
+        color: $color-dark_shade;
+    }
+
+    &__count {
+        @include font_14-3;
+        color: $color-rgba6;
+    }
+}
+
+.guest {
+    padding: 23px 0 23px 58px;
+    position: relative;
+
+    &__name {
+        @include font_14;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: $color-rgba5;
+        position: relative;
+
+        &-1::before {
+            content: url(../image/roomDetails/review/image1.png);
+            position: absolute;
+            top: 10px;
+            left: -20px;
+        }
+
+        &-2::before {
+            content: url(../image/roomDetails/review/image2.png);
+            position: absolute;
+            top: 10px;
+            left: -20px;
+        }
+    }
+
+    &__day-ago {
+        @include font_14;
+        color: $color-rgba5;
+    }
+
+    &__review {
+        @include font_14;
+        margin-top: 10px;
+        color: $color-rgba5;
+    }
+
+    &__favorite {
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        top: 85px;
+        left: 0;
+        border-radius: 10px;
+        background: $color-white;
+        border: 1px solid $color-purple;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+
+        &-img {
+            margin: 0 auto;
+        }
+
+        &-count {
+            @include font_10;
+            text-align: center;
+            color: $color-purple;
+            margin: 0 auto;
+        }
+    }
+}
+
+.room-regulations {
+    display: flex;
+
+    &__wrap:first-child {
+        padding-left: 24px;
+    }
+
+    &__wrap:not(:last-child) {
+        margin-right: 98px;
+    }
+
+    &__regulations {
+        max-width: 243px;
+    }
+
+    &__cancel {
+        max-width: 341px;
+    }
+
+    &__title {
+        @include font_19;
+        color: $color-dark_shade;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        @include font_14;
+        color: $color-rgba5;
+        
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__list {
+        position: relative;
+
+        &::before {
+            content: url(../image/roomDetails/icons/Ellipse.png);
+            margin-right: 10px;
+            position: absolute;
+            top: 0;
+            left: -20px;
+        }
+    }
 }
 
 
@@ -389,6 +527,7 @@
     background-image: url(../image/registration/bgi.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     padding: 20px 0;
 
     &__form {
@@ -402,13 +541,6 @@
         box-sizing: border-box;
         box-shadow: 0px 0px 25px $color-rgba2;
         border-radius: 4px;
-    }
-
-    &__title {
-        @include font_24;
-        color: $color-dark_shade;
-        text-align: start;
-        margin-bottom: 20px;
     }
 
     &__inp {
@@ -438,28 +570,12 @@
         color: $color-rgba5;
     }
 
-    &__radio-label:not(last-child) {
+    &__radio-label:not(:last-child) {
         margin-right: 20px;
     }
 
     &__label {
         margin-top: 24px;
-    }
-
-    &__btn {
-        @include font_12;
-        text-align: center;
-        text-transform: uppercase;
-        color: $color-white;
-        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
-        border-radius: 22px;
-        padding: 14px 20px;
-        position: relative;
-
-            &-arrow {
-                position: absolute;
-                right: 10px;
-            }
     }
 
     &__bottom-wrap {
@@ -477,16 +593,6 @@
     }
 
     &__enter {
-        @include font_12;
-        text-align: center;
-        text-transform: uppercase;
-        color: $color-purple;
-        background: $color-white;
-        border: 1px solid $color-rgba3;
-        box-sizing: border-box;
-        box-shadow: 0px 0px 25px $color-rgba2;
-        border-radius: 22px;
-        border: 2px solid $color-purple;
         padding: 14px 26px;
     }
 }
@@ -541,6 +647,7 @@
     background-image: url(../image/registration/bgi.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     padding: 172px 0;
 
     &__form {
@@ -556,33 +663,13 @@
         border-radius: 4px;
     }
 
-    &__title {
-        @include font_24;
-        color: $color-dark_shade;
-        text-align: start;
-        margin-bottom: 20px;
-    }
-
     &__inp {
         padding: 13px 0 13px 15px;
-        text-align: start;
         margin-bottom: 10px;
-    }
 
-    &__btn {
-        @include font_12;
-        text-align: center;
-        text-transform: uppercase;
-        color: $color-white;
-        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
-        border-radius: 22px;
-        padding: 14px 20px;
-        position: relative;
-
-            &-arrow {
-                position: absolute;
-                right: 10px;
-            }
+        &:last-child {
+            margin-bottom: 20px;
+        }
     }
 
     &__bottom-wrap {
@@ -600,16 +687,6 @@
     }
 
     &__enter {
-        @include font_12;
-        text-align: center;
-        text-transform: uppercase;
-        color: $color-purple;
-        background: $color-white;
-        border: 1px solid $color-rgba3;
-        box-sizing: border-box;
-        box-shadow: 0px 0px 25px $color-rgba2;
-        border-radius: 22px;
-        border: 2px solid $color-purple;
         padding: 14px 26px;
     }
 }

@@ -11,30 +11,44 @@
       <title>Registration</title>
 </head>
 <body>
-   <header class="header">
-      <div class="container">
-          <div class="header__wrap">
-              <a href="#">
-                  <img class="header__logo" src="./image/Logo.png" alt="logo">
-              </a>
-              <ul class="header__nav">
-                  <li class="header__nav-item">О нас</li>
-                  <li class="header__nav-item nav-item__arrow">Услуги</li>
-                  <li class="header__nav-item">Вакансии</li>
-                  <li class="header__nav-item">Новости</li>
-                  <li class="header__nav-item nav-item__arrow">Соглашения</li>
-              </ul>
-              <div>
-                  <a class="header__link-enter" href="#">войти</a>
-                  <a class="header__link-registration" href="#">зарегистрироваться</a>
-              </div>
-          </div>
-      </div>
-   </header>
-   <main class="registration">
-      <div class="container">
-         <form action="" class="registration__form">
-            <h2 class="registration__title">Регистрация аккаунта</h2>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <a href="#">
+                    <img class="header__logo" src="./image/Logo.png" alt="logo">
+                </a>
+                <div class="header__nav">
+                    <a href=""# class="header__nav-link text">О нас</a>
+                    <div class="header__dropdown">
+                        <a href=""# class="header__nav-link header__dropdown-link nav-link__arrow text">Услуги</a>
+                        <div class="header__dropdown-content">
+                            <a class="header__nav-link text" href="#">Услуги1</a>
+                            <a class="header__nav-link text" href="#">Услуги2</a>
+                            <a class="header__nav-link text" href="#">Услуги3</a>
+                        </div>
+                    </div>
+                    <a href=""# class="header__nav-link text">Вакансии</a>
+                    <a href=""# class="header__nav-link text">Новости</a>
+                    <div class="header__dropdown">
+                        <a href=""# class="header__nav-link header__dropdown-link nav-link__arrow text">Соглашения</a>
+                        <div class="header__dropdown-content">
+                            <a class="header__nav-link text" href="#">Соглашения1</a>
+                            <a class="header__nav-link text" href="#">Соглашения2</a>
+                            <a class="header__nav-link text" href="#">Соглашения3</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a class="header__link-enter btn__enter" href="#">войти</a>
+                    <a class="header__link-registration" href="#">зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="registration">
+        <div class="container">
+            <form action="" class="registration__form">
+            <h2 class="registration__title form__title">Регистрация аккаунта</h2>
             <input class="registration__inp input_form" type="text" name="" id="" placeholder="Имя" required>
             <input class="registration__inp input_form" type="text" name="" id="" placeholder="Фамилия" required>
             <div class="registration__radio-wrap">
@@ -50,16 +64,16 @@
             <input class="registration__inp input_form" type="password" name="" id="reg" placeholder="Пароль" required>
             <input class="reg-inp" type="checkbox" name="" id="checkbox">
             <label class="reg-lab" for="checkbox">Получать спецпредложения</label>
-            <button class="registration__btn">зарегистрироваться
-                <img class="main__form-btn-arrow" src="./image/icons/arrow_forward.png" alt="arrow">
+            <button class="registration__btn form__btn">зарегистрироваться
+                <img class="main__form-btn-arrow form__btn-arrow" src="./image/icons/arrow_forward.png" alt="arrow">
             </button>
             <div class="registration__bottom-wrap">
-               <span class="registration__span">Уже есть аккаунт на Toxin</span>
-               <a class="registration__enter" href="#index.html">войти</a>
+                <span class="registration__span">Уже есть аккаунт на Toxin</span>
+                <a class="registration__enter btn__enter" href="#index.html">войти</a>
             </div>
-         </form>
-      </div>
-   </main>
+            </form>
+        </div>
+    </main>
    <footer class="footer">
       <div class="container">
           <div class="footer-main">
@@ -90,7 +104,10 @@
               <div class="footer-main__subs">
                   <h3 class="footer-main__heading">Подписка</h3>
                   <p class="footer-main__item">Получайте специальные предложения и новости сервиса</p>
-                  <input class="footer-main__inp" type="email" name="" id="" placeholder="Email" required>
+                  <div class="footer-main__inp-wrap">
+                    <input class="footer-main__inp" type="email" placeholder="Email" required>
+                    <button class="footer-main__btn"><img src="./image/icons/arrow_forward_v.png" alt="img"></button>
+                </div>
               </div>
           </div>
           <div class="footer-bottom">
