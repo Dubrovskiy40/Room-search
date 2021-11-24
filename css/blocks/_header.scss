@@ -21,11 +21,6 @@
 
         &-item {
             margin-right: 20px;
-
-            &__arrow::after {
-                content: url(../image/icons/arrow_down.png);
-                margin-left: 10px;
-            }
         }
     }
 
@@ -47,4 +42,8 @@
         border-radius: 22px;
         padding: 10px 20px;
     }
+}
+.nav-item__arrow::after {
+    content: url(../image/icons/arrow_down.png);
+    margin-left: 10px;
 }

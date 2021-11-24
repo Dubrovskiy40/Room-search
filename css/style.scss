@@ -7,14 +7,17 @@
 /** main **/
 .main {
     padding: 70px 0 18px;
+    background-image: url(../image/bgi_index.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 
     &__form {
         max-width: 380px;
         padding: 40px 30px 30px;
         background: $color-white;
-        border: 1px solid rgba(0, 0, 0, 0.12);
+        border: 1px solid $color-rgba3;
         box-sizing: border-box;
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 25px $color-rgba2;
         border-radius: 4px;
         display: flex;
         flex-direction: column;
@@ -35,31 +38,12 @@
             margin-right: 20px;
         }
 
-        &-lable {
-            @include font_12;
-            text-transform: uppercase;
-            color: $color-dark_shade;
-            margin-bottom: 5px;
-        }
-
         &-inp {
-            @include font_14-2;
-            color: rgba(31, 32, 65, 0.75);
-            background: $color-white;
-            border: 1px solid rgba(31, 32, 65, 0.25);
-            box-sizing: border-box;
-            border-radius: 4px;
             padding: 11px 0 8px 15px;
             max-width: 150px;
         }
 
         &-select {
-            @include font_14-2;
-            color: rgba(31, 32, 65, 0.75);
-            background: $color-white;
-            border: 1px solid rgba(31, 32, 65, 0.25);
-            box-sizing: border-box;
-            border-radius: 4px;
             padding: 11px 0 8px 15px;
             margin-bottom: 21px;
         }
@@ -84,7 +68,549 @@
     &-wrap__title {
         @include font_14;
         text-align: right;
-        color: rgba(31, 32, 65, 0.75);
+        color: $color-rgba5;
+    }
+}
+
+/** search room **/
+.search-wrap {
+    display: grid;
+    grid-template-columns: 266px 835px;
+    grid-template-areas: 
+        "aside main";
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+
+    &__inp {
+        padding: 10px 0 10px 15px;
+        margin-bottom: 20px;
+    }
+
+    &__extra-btn::after {
+        content: url(../image/icons/arrow_down.png);
+        margin-left: 13px;
+    }
+
+    &__text {
+        @include font_12;
+        color: $color-rgba;
+    }
+
+    &__range-description {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__checkbox-wrap {
+        margin-bottom: 10px;
+    }
+
+    &__checkbox {
+        background: #FFFFFF;
+        border: 1px solid #BC9CFF;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+}
+
+.rooms {
+    grid-area: main;
+    padding-bottom: 70px;
+
+    &__title {
+        @include font_24;
+        color: $color-dark_shade;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    gap: 12px;
+    justify-content: end;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.card {
+    background: $color-white;
+    box-shadow: 0px 10px 20px $box-shadow;
+    border-radius: 4px;
+
+    &__wrap-img {
+        position: relative
+    }
+
+    &__img-arrow-left {
+        position: absolute;
+        color: $color-white;
+        top: 50%;
+        left: 5%;
+    }
+
+    &__img-arrow-right {
+        position: absolute;
+        color: $color-white;
+        top: 50%;
+        right: 5%;
+    }
+
+    &__img {
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    // &__img-count {
+    //     position: absolute;
+    //     top: 85%;
+    //     right: 5%;
+    // }
+
+    &__slider-nav {
+        position: absolute;
+        top: 85%;
+        right: 5%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        &-item {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 1px solid $color-white;
+
+            &:not(last-child) {
+                margin-right: 3px;
+            }
+
+            &.active {
+                background-color: $color-white;
+            }
+        }
+    }
+
+
+
+    &__description {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        display: flex;
+        margin-left: 20px;
+
+        &-room {
+            @include font_14-2;
+            color: $color-dark_shade;
+            margin-right: 10px;
+        }
+
+        &-type {
+            @include font_12;
+            text-transform: uppercase;
+            color: $color-purple;
+            margin-right: 25px;
+        }
+
+        &-hide {
+            display: none;
+        }
+
+        &-price {
+            @include font_14-2;
+            color: $box-shadow;
+        }
+    }
+
+    &__hr {
+        background: $color-rgba;
+        height: 1px;
+        margin: 0 20px;
+    }
+
+    &__review {
+        display: flex;
+        padding-top: 8px;
+        margin-left: 20px;
+        padding-bottom: 20px;
+
+        &-stars {
+            margin-right: 22px;
+        }
+
+        &-count {
+            @include font_14-2;
+            text-align: right;
+            color: $color-rgba;
+        }
+    }
+}
+
+.carouse {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    &_page {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: $color-dark_shade;
+        background:  $color-white;
+        width: 40px;
+        height: 40px;
+    }
+
+    &_one {
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+        border-radius: 22px;
+        color: $color-white;
+    }
+    
+    &-arrow_right {
+        background: linear-gradient(180deg, $color-green 0%, $color-sky_blue 100%);
+        border-radius: 22px;
+    }
+
+    &_arrow-icon {
+        display: block;
+        padding: 11px 11px;
+    }
+
+    &_description {
+        margin-top: 10px;
+        @include font_14;
+        color: $color-rgba5;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/** room details **/
+.room-details__show {
+    background-image:
+        url(../image/roomDetails/bgi.png), 
+        url(../image/roomDetails/bgi2.png),
+        url(../image/roomDetails/bgi3.png);
+    background-position:center left, right top, right bottom;
+    background-repeat:no-repeat, no-repeat, no-repeat;
+    max-width: 1442px;
+    margin: 0 auto;
+}
+
+.room-statistics {
+    padding-top: 70px;
+    display: flex;
+    position: relative;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include font_19;
+    }
+
+    &__text {
+        @include font_14;
+        margin-top: 23px;
+
+        &:not(last-child) {
+            margin-bottom: 17px;
+        }
+    }
+}
+
+.comfort::before {
+    content: url(../image/roomDetails/comfort.png);
+    margin-right: 10px;
+} 
+.convenience::before {
+    content: url(../image/roomDetails/convenience.png);
+    margin-right: 10px;
+}
+.cosiness::before {
+    content: url(../image/roomDetails/cosiness.png);
+    margin-right: 10px;
+}
+
+
+
+.room-reserve {
+    max-width: 380px;
+    padding: 40px 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.reserve-order {
+    display: flex;
+    justify-content: space-between;
+}
+.reserve-order:not(last-child) {
+    margin-bottom: 10px;
+}
+.reserve-order > p, .reserve-order > span {
+    @include font_14;
+    color: rgba(31, 32, 65, 0.75);
+} 
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 20px;
+}
+.total > span {
+    @include font_19;
+    color: #1F2041;
+}
+.cost {
+
+}
+
+
+/** registration **/
+.registration {
+    background-image: url(../image/registration/bgi.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 0;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 40px 30px 30px;
+        background: $color-white;
+        border: 1px solid $color-rgba3;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px $color-rgba2;
+        border-radius: 4px;
+    }
+
+    &__title {
+        @include font_24;
+        color: $color-dark_shade;
+        text-align: start;
+        margin-bottom: 20px;
+    }
+
+    &__inp {
+        padding: 13px 0 13px 15px;
+        text-align: start;
+        margin-bottom: 10px;
+    }
+
+    &__radio-wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__radio-inp {
+        background: $color-white;
+        border: 1px solid $color-rgba4;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+        border-radius: 10px;
+        margin-right: 14px;
+    }
+
+    &__radio-label {
+        @include font_14;
+        color: $color-rgba5;
+    }
+
+    &__radio-label:not(last-child) {
+        margin-right: 20px;
+    }
+
+    &__label {
+        margin-top: 24px;
+    }
+
+    &__btn {
+        @include font_12;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-white;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+        border-radius: 22px;
+        padding: 14px 20px;
+        position: relative;
+
+            &-arrow {
+                position: absolute;
+                right: 10px;
+            }
+    }
+
+    &__bottom-wrap {
+        display: flex;
+        justify-content:space-between;
+        margin-top: 30px;
+    }
+
+    &__span {
+        @include font_14-2;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $color-black;
+    }
+
+    &__enter {
+        @include font_12;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-purple;
+        background: $color-white;
+        border: 1px solid $color-rgba3;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px $color-rgba2;
+        border-radius: 22px;
+        border: 2px solid $color-purple;
+        padding: 14px 26px;
+    }
+}
+
+/* Стилизация checkbox */
+.reg-lab {
+    margin: 10px 0 24px;
+    @include font_14;
+    color: $color-rgba5;
+}
+.reg-inp {
+    display: none;
+}
+.reg-inp+.reg-lab,
+.reg-inpp+.reg-lab::before,
+.reg-inp+.reg-lab::after {
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+.reg-lab {
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	height: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.reg-lab::after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 12px;
+	height: 12px;
+	background: $color-rgba4;
+	border-radius: 50%;
+}
+.reg-inp:checked+.reg-lab::after {
+	left: 24px;
+	background-color: $color-white;
+}
+#checkbox+.reg-lab {
+    background-color: $color-white;
+    border: 1px solid $color-rgba4;
+}
+#checkbox:checked+.reg-lab {
+    background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%); 
+}
+
+/** sign in **/
+.sign {
+    background-image: url(../image/registration/bgi.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 172px 0;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 40px 30px 30px;
+        background: $color-white;
+        border: 1px solid $color-rgba2;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px $color-rgba3;
+        border-radius: 4px;
+    }
+
+    &__title {
+        @include font_24;
+        color: $color-dark_shade;
+        text-align: start;
+        margin-bottom: 20px;
+    }
+
+    &__inp {
+        padding: 13px 0 13px 15px;
+        text-align: start;
+        margin-bottom: 10px;
+    }
+
+    &__btn {
+        @include font_12;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-white;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+        border-radius: 22px;
+        padding: 14px 20px;
+        position: relative;
+
+            &-arrow {
+                position: absolute;
+                right: 10px;
+            }
+    }
+
+    &__bottom-wrap {
+        display: flex;
+        justify-content:space-between;
+        margin-top: 30px;
+    }
+
+    &__span {
+        @include font_14-2;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $color-black;
+    }
+
+    &__enter {
+        @include font_12;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-purple;
+        background: $color-white;
+        border: 1px solid $color-rgba3;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px $color-rgba2;
+        border-radius: 22px;
+        border: 2px solid $color-purple;
+        padding: 14px 26px;
     }
 }
 

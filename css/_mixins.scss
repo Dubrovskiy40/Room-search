@@ -1,5 +1,4 @@
 @mixin font_12 {
-    font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -7,7 +6,6 @@
 }
 
 @mixin font_14 {
-    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -15,15 +13,20 @@
 }
 
 @mixin font_14-2 {
-    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 18px;
+}
+
+@mixin font_19 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
 }
 
 @mixin font_24 {
-    font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;

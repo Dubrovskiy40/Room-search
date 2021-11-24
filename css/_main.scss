@@ -12,7 +12,33 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+input, 
+button {
+    font-family: inherit;
+}
+
 .container {
     max-width: 1160px;
     margin: 0 auto;
+}
+
+.input_title {
+    @include font_12;
+    text-transform: uppercase;
+    color: $color-dark_shade;
+    margin-bottom: 5px;
+}
+
+.input_form {
+    @include font_14-2;
+    color: $color-rgba5;
+    background: $color-white;
+    border: 1px solid $color-rgba4;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.text {
+    @include font_14-2;
+    color: $color-rgba5;
 }
