@@ -94,6 +94,47 @@ button {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
+.dropdown__item {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  margin-right: auto;
+  margin-bottom: 22px;
+}
+.dropdown__number {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+.dropdown__btn-choice {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(31, 32, 65, 0.5);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  box-sizing: border-box;
+  padding: 5px;
+}
+.dropdown__btn-change {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #BC9CFF;
+  text-transform: uppercase;
+}
+
 /** header **/
 .header {
   background: #FFFFFF;
@@ -236,14 +277,18 @@ button {
 }
 .aside__text {
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  color: rgba(31, 32, 65, 0.05);
+  color: rgba(31, 32, 65, 0.5);
 }
 .aside__range-description {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+.aside__range {
+  margin-bottom: 14px;
 }
 .aside__checkbox-wrap {
   margin-bottom: 10px;

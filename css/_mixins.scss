@@ -11,6 +11,12 @@
     font-size: 12px;
     line-height: 15px;
 }
+@mixin font_12-2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+}
 
 @mixin font_14 {
     font-style: normal;
@@ -31,6 +37,13 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 14px;;
+}
+
+@mixin font_18 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 @mixin font_19 {

@@ -13,92 +13,94 @@
 <body>
    <header class="header">
       <div class="container">
-          <div class="header__wrap">
-              <a href="#">
+            <div class="header__wrap">
+               <a href="index.html">
                   <img class="header__logo" src="./image/Logo.png" alt="logo">
-              </a>
-              <div class="header__nav">
-                  <a href=""# class="header__nav-link text">О нас</a>
+               </a>
+               <div class="header__nav">
+                  <a href="https://time100.ru" class="header__nav-link text">О нас</a>
                   <div class="header__dropdown">
-                      <a href=""# class="header__nav-link header__dropdown-link nav-link__arrow text">Услуги</a>
-                      <div class="header__dropdown-content">
-                          <a class="header__nav-link text" href="#">Услуги1</a>
-                          <a class="header__nav-link text" href="#">Услуги2</a>
-                          <a class="header__nav-link text" href="#">Услуги3</a>
-                      </div>
+                        <a href="https://time100.ru" class="header__nav-link header__dropdown-link nav-link__arrow text">Услуги</a>
+                        <div class="header__dropdown-content">
+                           <a class="header__nav-link text" href="https://time100.ru">Услуги1</a>
+                           <a class="header__nav-link text" href="https://time100.ru">Услуги2</a>
+                           <a class="header__nav-link text" href="https://time100.ru">Услуги3</a>
+                        </div>
                   </div>
-                  <a href=""# class="header__nav-link text">Вакансии</a>
-                  <a href=""# class="header__nav-link text">Новости</a>
+                  <a href="https://time100.ru" class="header__nav-link text">Вакансии</a>
+                  <a href="https://time100.ru" class="header__nav-link text">Новости</a>
                   <div class="header__dropdown">
-                      <a href=""# class="header__nav-link header__dropdown-link nav-link__arrow text">Соглашения</a>
-                      <div class="header__dropdown-content">
-                          <a class="header__nav-link text" href="#">Соглашения1</a>
-                          <a class="header__nav-link text" href="#">Соглашения2</a>
-                          <a class="header__nav-link text" href="#">Соглашения3</a>
-                      </div>
+                        <a href="https://time100.ru" class="header__nav-link header__dropdown-link nav-link__arrow text">Соглашения</a>
+                        <div class="header__dropdown-content">
+                           <a class="header__nav-link text" href="https://time100.ru">Соглашения1</a>
+                           <a class="header__nav-link text" href="https://time100.ru">Соглашения2</a>
+                           <a class="header__nav-link text" href="https://time100.ru">Соглашения3</a>
+                        </div>
                   </div>
-              </div>
-              <div>
-                  <a class="header__link-enter btn__enter" href="#">войти</a>
-                  <a class="header__link-registration" href="#">зарегистрироваться</a>
-              </div>
-          </div>
+               </div>
+               <div>
+                  <a class="header__link-enter btn__enter" href="signIn.html">войти</a>
+                  <a class="header__link-registration" href="registration.html">зарегистрироваться</a>
+               </div>
+            </div>
       </div>
-  </header>
+   </header>
    <main class="search-room">
       <div class="container">
          <div class="search-wrap">
-            <aside class="aside">
+            <section class="aside">
                <label class="input_title" for="dataState">даты пребывания в отеле</label>
                <input class="aside__inp input_form" type="date" name="" id="dataState">
                <label class="input_title" for="guests">гости</label>
                <select class="aside__inp input_form"  name="" id="guests">
-               <option value="">Сколько гостей</option>
-               <option value="">1</option>
-               <option value="">2</option>
-               <option value="">3</option>
-               <option value="">4</option>
+                  <option value="">Сколько гостей</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+               </select>
                <div class="aside__range-description">
                   <label class="input_title" for="range">диапазон цены</label>
-                  <span>5 000₽ - 10 000₽</span>
+                  <span class="aside__text">5 000₽ - 10 000₽</span>
                </div>
-               <input type="range" name="" id="range">
+               <input class="aside__range" type="range" name="" id="range">
                <p class="aside__text">Стоимость за сутки пребывания в номере</p>
                <fieldset>
                   <legend class="input_title">правила дома</legend>
                   <div class="aside__checkbox-wrap">
-                    <input class="aside__checkbox" type="checkbox" id="checkbox1" name="t" value="">
-                    <label for="checkbox1"><p class="text">Можно курить</p></label>
+                     <input class="aside__checkbox" type="checkbox" id="checkbox1" name="t" value="">
+                     <label for="checkbox1"><p class="text">Можно курить</p></label>
                   </div>
                   <div class="aside__checkbox-wrap">
-                    <input class="aside__checkbox" type="checkbox" id="checkbox2" name="" value="" checked>
-                    <label for="checkbox2"><p class="text">Можно с питомцами</p></label>
+                     <input class="aside__checkbox" type="checkbox" id="checkbox2" name="" value="" checked>
+                     <label for="checkbox2"><p class="text">Можно с питомцами</p></label>
                   </div>
                   <div class="aside__checkbox-wrap">
                      <input class="aside__checkbox" type="checkbox" id="checkbox3" name="" value="" checked>
                      <label for="checkbox3"><p class="text">Можно пригласить гостей (до 10 человек</p>)</label>
-                   </div>
-                </fieldset>
-                <fieldset class="">
+                  </div>
+               </fieldset>
+               <fieldset class="">
                   <legend class="input_title">доступность</legend>
                   <div class="aside__checkbox-wrap">
-                    <input class="aside__checkbox" type="checkbox" id="coding" name="interest" value="coding">
-                    <label for="coding">Широкий коридор<p class="aside__text">Ширина коридоров в номере не менее 91 см.</p></label>
+                     <input class="aside__checkbox" type="checkbox" id="coding" name="interest" value="coding">
+                     <label for="coding">Широкий коридор<p class="aside__text">Ширина коридоров в номере не менее 91 см.</p></label>
                   </div>
                   <div class="aside__checkbox-wrap">
-                    <input class="aside__checkbox" type="checkbox" id="music" name="interest" value="music" checked>
-                    <label for="music">Помощник для инвалидов<p class="aside__text">На 1 этаже вас встретит специалист  и проводит до номера.</p></label>
+                     <input class="aside__checkbox" type="checkbox" id="music" name="interest" value="music" checked>
+                     <label for="music">Помощник для инвалидов<p class="aside__text">На 1 этаже вас встретит специалист  и проводит до номера.</p></label>
                   </div>
-                </fieldset>
-                <label class="input_title" for="comfort">удобства номера</label>
+               </fieldset>
+               <label class="input_title" for="comfort">удобства номера</label>
                <select class="aside__inp input_form"  name="" id="comfort">
-               <option value="">2 спальни, 2 кровати...</option>
-               <option value="">1</option>
-               <option value="">2</option>
-               <option value="">3</option>
-               <option value="">4</option>
+                  <option value="">2 спальни, 2 кровати...</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+               </select>
                <button class="aside__title aside__extra-btn input_title">дополнительные удобства</button>
-            </aside>
+            </section>
             <section class="rooms">
                   <h2 class="rooms__title">Номера, которые мы для вас подобрали</h2>
                   <div class="cards">

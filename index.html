@@ -14,33 +14,33 @@
     <header class="header">
         <div class="container">
             <div class="header__wrap">
-                <a href="#">
+                <a href="index.html">
                     <img class="header__logo" src="./image/Logo.png" alt="logo">
                 </a>
                 <div class="header__nav">
-                    <a href=""# class="header__nav-link text">О нас</a>
+                    <a href="https://time100.ru" class="header__nav-link text">О нас</a>
                     <div class="header__dropdown">
-                        <a href=""# class="header__nav-link header__dropdown-link nav-link__arrow text">Услуги</a>
+                        <a href="https://time100.ru" class="header__nav-link header__dropdown-link nav-link__arrow text">Услуги</a>
                         <div class="header__dropdown-content">
-                            <a class="header__nav-link text" href="#">Услуги1</a>
-                            <a class="header__nav-link text" href="#">Услуги2</a>
-                            <a class="header__nav-link text" href="#">Услуги3</a>
+                            <a class="header__nav-link text" href="https://time100.ru">Услуги1</a>
+                            <a class="header__nav-link text" href="https://time100.ru">Услуги2</a>
+                            <a class="header__nav-link text" href="https://time100.ru">Услуги3</a>
                         </div>
                     </div>
-                    <a href=""# class="header__nav-link text">Вакансии</a>
-                    <a href=""# class="header__nav-link text">Новости</a>
+                    <a href="https://time100.ru" class="header__nav-link text">Вакансии</a>
+                    <a href="https://time100.ru" class="header__nav-link text">Новости</a>
                     <div class="header__dropdown">
-                        <a href=""# class="header__nav-link header__dropdown-link nav-link__arrow text">Соглашения</a>
+                        <a href="https://time100.ru" class="header__nav-link header__dropdown-link nav-link__arrow text">Соглашения</a>
                         <div class="header__dropdown-content">
-                            <a class="header__nav-link text" href="#">Соглашения1</a>
-                            <a class="header__nav-link text" href="#">Соглашения2</a>
-                            <a class="header__nav-link text" href="#">Соглашения3</a>
+                            <a class="header__nav-link text" href="https://time100.ru">Соглашения1</a>
+                            <a class="header__nav-link text" href="https://time100.ru">Соглашения2</a>
+                            <a class="header__nav-link text" href="https://time100.ru">Соглашения3</a>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <a class="header__link-enter btn__enter" href="#">войти</a>
-                    <a class="header__link-registration" href="#">зарегистрироваться</a>
+                    <a class="header__link-enter btn__enter" href="signIn.html">войти</a>
+                    <a class="header__link-registration" href="registration.html">зарегистрироваться</a>
                 </div>
             </div>
         </div>
@@ -60,14 +60,29 @@
                     </div>
                 </div>
                 <label class="main__form-lable input_title" for="guests">гости</label>
-                <select class="main__form-select input_form"  name="" id="guests">
+                <select class="main__form-select input_form dropdown"  name="" id="guests">
                     <option value="">Сколько гостей</option>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
+                    <option value="adults" class="dropdown__item">взрослые
+                        <div class="dropdown__btn-prev dropdown__btn-choice">-</div>
+                        <span class="dropdown__number">0</span>
+                        <div class="dropdown__btn-next dropdown__btn-choice">+</div>
+                    </option>
+                    <option value="children" class="dropdown__item">дети
+                        <div class="dropdown__btn-prev dropdown__btn-choice">-</div>
+                        <span class="dropdown__number ">0</span>
+                        <div class="dropdown__btn-next dropdown__btn-choice">+</div>
+                    </option>
+                    <option value="baby" class="dropdown__item">младенцы
+                        <div class="dropdown__btn-prev dropdown__btn-choice">-</div>
+                        <span class="dropdown__number">0</span>
+                        <div class="dropdown__btn-next dropdown__btn-choice">+</div>
+                    </option>
+                    <option value="buttons">
+                        <button class="dropdown__btn-clear btn__clear_hidden dropdown__btn-change">очистить</button>
+                        <button class="dropdown__btт-apply dropdown__btn-change">применить</button>
+                    </option>
                 </select>
-                <a class="main__form-btn form__btn" href="#">подобрать номер
+                <a class="main__form-btn form__btn" href="searchRoom.html">подобрать номер
                     <img class="main__form-btn-arrow form__btn-arrow" src="./image/icons/arrow_forward.png" alt="arrow">
                 </a>
             </form>

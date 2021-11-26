@@ -76,13 +76,18 @@
     }
 
     &__text {
-        @include font_12;
-        color: $color-rgba;
+        @include font_12-2;
+        color: $color-rgba6;
     }
 
     &__range-description {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__range {
+        margin-bottom: 14px;
     }
 
     &__checkbox-wrap {
