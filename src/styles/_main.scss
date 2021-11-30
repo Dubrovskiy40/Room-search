@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input, 
+button {
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.text {
+    @include font_14-2;
+    color: $color-rgba6;
+}
+
+
+.form__title {
+    @include font_24;
+    color: $color-dark_shade;
+    margin-bottom: 20px;
+}
+
+.input_title {
+    @include font_12;
+    text-transform: uppercase;
+    color: $color-dark_shade;
+    margin-bottom: 5px;
+}
+
+.input_form {
+    @include font_14-2;
+    color: $color-rgba5;
+    background: $color-white;
+    border: 1px solid $color-rgba4;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.form__btn {
+    @include font_12;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+    border-radius: 22px;
+    padding: 14px 18px;
+    position: relative;
+
+    &-arrow {
+        position: absolute;
+        right: 10px;
+        top: 12px;
+    }
+}
+
+.btn__enter {
+    @include font_12;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-purple;
+    background: $color-white;
+    border-radius: 22px;
+    border: 1px solid $color-rgba3;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px $color-rgba2;
+}
+
+.dropdown {
+
+    &__item {
+        // padding: 13px 7px 13px 15px;
+        @include font_12;
+        text-transform: uppercase;
+        color: $color-dark_shade;
+        margin-right: auto;
+        margin-bottom: 22px;
+    }
+
+    &__btn-prev {
+    
+    }
+
+    &__number {
+        @include font_12;
+        text-transform: uppercase;
+        color: $color-dark_shade;
+    }
+
+    &__btn-next {
+        
+    }
+
+    &__btn-choice {
+        @include font_18;
+        color: $color-rgba6;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: $color-white;
+        border: 1px solid $color-rgba6;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+
+    &__btn-change {
+        @include font_12;
+        color: $color-purple;
+        text-transform: uppercase;
+    }
+
+}

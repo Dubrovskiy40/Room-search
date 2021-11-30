@@ -1,0 +1,136 @@
+@use 'global';
+@use 'fonts';
+@import "_variables";
+@import "_mixins";
+@import "_main";
+
+@import "blocks/header";
+
+//@import "~bootstrap/scss/bootstrap";
+
+@import 'blocks/header';
+
+/** index.html **/
+.main {
+    padding: 70px 0 18px;
+    background-image: url(../images/index/bgi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__form {
+        max-width: 380px;
+        padding: 40px 30px 30px;
+        background: $color-white;
+        border: 1px solid $color-rgba3;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px $color-rgba2;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 320px;
+
+        &-inp-wrap {
+            margin-bottom: 21px;
+            display: flex;
+        }
+
+        &-dataStart-wrap {
+            margin-right: 20px;
+        }
+
+        &-inp {
+            padding: 11px 0 8px 15px;
+            max-width: 150px;
+        }
+
+        &-select {
+            padding: 11px 0 8px 15px;
+            margin-bottom: 21px;
+        }
+    }
+
+    &-wrap__title {
+        @include font_14;
+        text-align: right;
+        color: $color-rgba5;
+    }
+}
+
+
+/** registration **/
+.registration {
+    background-image: url(../images/registration/bgi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 20px 0;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 40px 30px 30px;
+        background: $color-white;
+        border: 1px solid $color-rgba3;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px $color-rgba2;
+        border-radius: 4px;
+    }
+
+    &__inp {
+        padding: 13px 0 13px 15px;
+        text-align: start;
+        margin-bottom: 10px;
+    }
+
+    &__radio-wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__radio-inp {
+        background: $color-white;
+        border: 1px solid $color-rgba4;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+        border-radius: 10px;
+        margin-right: 14px;
+    }
+
+    &__radio-label {
+        @include font_14;
+        color: $color-rgba5;
+    }
+
+    &__radio-label:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &__label {
+        margin-top: 24px;
+    }
+
+    &__bottom-wrap {
+        display: flex;
+        justify-content:space-between;
+        margin-top: 30px;
+    }
+
+    &__span {
+        @include font_14-2;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $color-black;
+    }
+
+    &__enter {
+        padding: 14px 26px;
+    }
+}
+
+
+@import 'blocks/footer';
