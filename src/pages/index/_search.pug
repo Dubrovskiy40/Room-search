@@ -1,0 +1,105 @@
+//- extend mixin/mixinCard
+- 
+   var cardRender = [
+      {pathRoom: "../../images/searchRoom/image_01.jpg", numberRoom: "888", typeRoom: "люкс", priceRoom: "9 990", reviewCount: "145"},
+      {pathRoom: "../../images/searchRoom/image_02.jpg", numberRoom: "840", typeRoom: "", priceRoom: "9 990", reviewCount: "65"},
+      {pathRoom: "../../images/searchRoom/image_03.jpg", numberRoom: "980", typeRoom: "люкс", priceRoom: "8 500", reviewCount: "35"},
+      {pathRoom: "../../images/searchRoom/image_04.jpg", numberRoom: "856", typeRoom: "", priceRoom: "7 300", reviewCount: "19"},
+      {pathRoom: "../../images/searchRoom/image_05.jpg", numberRoom: "740", typeRoom: "", priceRoom: "6 000", reviewCount: "44"},
+      {pathRoom: "../../images/searchRoom/image_06.jpg", numberRoom: "982", typeRoom: "", priceRoom: "5 800", reviewCount: "56"},
+      {pathRoom: "../../images/searchRoom/image_07.jpg", numberRoom: "678", typeRoom: "", priceRoom: "5 500", reviewCount: "45"},
+      {pathRoom: "../../images/searchRoom/image_08.jpg", numberRoom: "450", typeRoom: "", priceRoom: "5 300", reviewCount: "39"},
+      {pathRoom: "../../images/searchRoom/image_09.jpg", numberRoom: "350", typeRoom: "", priceRoom: "5 000", reviewCount: "77"},
+      {pathRoom: "../../images/searchRoom/image_10.jpg", numberRoom: "666", typeRoom: "", priceRoom: "5 000", reviewCount: "25"},
+      {pathRoom: "../../images/searchRoom/image_11.jpg", numberRoom: "444", typeRoom: "", priceRoom: "5 000", reviewCount: "15"},
+      {pathRoom: "../../images/searchRoom/image_12.jpg", numberRoom: "352", typeRoom: "", priceRoom: "5 000", reviewCount: "55"}
+   ];
+
+main.search-room
+   .container
+      .search-wrap
+         section.aside
+            label.input_title(for="dataState") даты пребывания в отеле
+            input#dataState.aside__inp.input_form(type="date" name="")
+            label.input_title(for="guests") гости
+            select#guests.aside__inp.input_form(name="")
+               option(value="") Сколько гостей
+               option(value="") 1
+               option(value="") 2
+               option(value="") 3
+               option(value="") 4
+            .aside__range-description.aside__inp_title
+               label.input_title(for="range") диапазон цены
+               span.aside__text 5 000₽ - 10 000₽
+            input#range.aside__range(type="range" multiple min="0" max="100" step="1" name="" data-values="10 90")
+            p.aside__text Стоимость за сутки пребывания в номере
+            fieldset.aside__inp_title
+               legend.input_title правила дома
+               .aside__checkbox-wrap
+                  input#checkbox1.aside__checkbox(type="checkbox" name="t" value="")
+                  label(for="checkbox1")
+                     p.text Можно курить
+               .aside__checkbox-wrap
+                  input#checkbox2.aside__checkbox(type="checkbox" name="" value="" checked="")
+                  label(for="checkbox2")
+                     p.text Можно с питомцами
+               .aside__checkbox-wrap
+                  input#checkbox3.aside__checkbox(type="checkbox" name="" value="" checked="")
+                  label(for="checkbox3")
+                     p.text Можно пригласить гостей (до 10 человек
+                        | )
+            fieldset.aside__inp_title
+               legend.input_title доступность
+               .aside__checkbox-wrap
+                  input#coding.aside__checkbox(type="checkbox" name="interest" value="coding")
+                  label.aside__checkbox_label(for="coding")
+                     | Широкий коридор
+                     p.aside__text Ширина коридоров в номере не менее 91 см.
+               .aside__checkbox-wrap
+                  input#music.aside__checkbox(type="checkbox" name="interest" value="music" checked="")
+                  label.aside__checkbox_label(for="music")
+                     | Помощник для инвалидов
+                     p.aside__text На 1 этаже вас встретит специалист  и проводит до номера.
+            label.aside__inp_title.input_title(for="comfort") удобства номера
+            select#comfort.aside__inp.input_form(name="")
+               option(value="") 2 спальни, 2 кровати...
+               option(value="") 1
+               option(value="") 2
+               option(value="") 3
+               option(value="") 4
+            label.aside__inp_title.input_title(for="") дополнительные удобства
+         section.rooms
+            h2.rooms__title Номера, которые мы для вас подобрали
+            .cards
+               for element in cardRender
+                  .card
+                     .card__wrap-img
+                        img.card__img-arrow-left(src=require("../../images/searchRoom/icons/arrow_left.png") alt="left")
+                        img.card__img(src=require("../../images/searchRoom/image_01.jpg") alt="room")
+                        img.card__img-arrow-right(src=require("../../images/searchRoom/icons/arrow_right.png") alt="right")
+                        .card__slider-nav
+                           .card__slider-nav-item.active
+                           .card__slider-nav-item
+                           .card__slider-nav-item
+                           .card__slider-nav-item
+                     .card__description.card__description_line
+                        p.card__description-room № #{element.numberRoom}
+                        p.card__description-type #{element.typeRoom}
+                        span.card__description-price.text #{element.priceRoom} ₽ в сутки
+                     .card__review
+                        .card__review-stars
+                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                        p.card__review-count.text #{element.reviewCount} Отзывов
+            nav.carouse
+               button.carouse_page.carouse_one(type='button') 1
+               button.carouse_page(type='button') 2
+               button.carouse_page(type='button') 3
+               button.carouse_page.carouse_point(type='button') ...
+               button.carouse_page(type='button') 15
+               button.carouse-arrow_right(type='button')
+                  img.carouse_arrow-icon(src=require('../../images/icons/arrow_forward.png') alt='arrow')
+            span.carouse_description 1 – 12 из 100+ вариантов аренды

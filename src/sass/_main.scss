@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+input, 
+button {
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.text {
+    @include Body;
+    color: $color-dark_shade_50;
+}
+
+
+.form__title {
+    @include H1;
+    color: $color-dark_shade_100;
+    margin-bottom: 20px;
+}
+
+.input_title {
+    @include H3;
+    text-transform: uppercase;
+    color:$color-dark_shade_100;
+    margin-bottom: 5px;
+}
+
+.input_form {
+    @include Body;
+    color: $color-dark_shade_75;
+    background: $color-white;
+    border: 1px solid $color-dark_shade_25;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.form__btn {
+    @include H3;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+    border-radius: 22px;
+    padding: 14px 18px;
+    position: relative;
+
+    &-arrow {
+        position: absolute;
+        right: 10px;
+        top: 12px;
+    }
+}
+
+.btn__enter {
+    @include H3;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-purple;
+    background: 
+        linear-gradient($color-white, $color-white) padding-box,
+        linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+    border-radius: 22px;
+    border:2px solid transparent;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px $color-dark_shade_25;
+}
+
+.dropdown {
+
+    &__item {
+        @include H3;
+        text-transform: uppercase;
+        color: $color-dark_shade_100;
+        margin-right: auto;
+        margin-bottom: 22px;
+    }
+
+    &__number {
+        @include H3;
+        text-transform: uppercase;
+        color: $color-dark_shade_100;
+    }
+
+
+    &__btn-choice {
+        @include H2;
+        color: $color-dark_shade_50;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: $color-white;
+        border: 1px solid $color-dark_shade_50;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+
+    &__btn-change {
+        @include H3;
+        color: $color-purple;
+        text-transform: uppercase;
+    }
+}

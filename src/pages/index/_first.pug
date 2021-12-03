@@ -1,0 +1,40 @@
+main.main
+  .container
+    form.main__form(action="")
+      h2.main__form-title.form__title Найдём номера под ваши пожелания
+      .main__form-inp-wrap
+        .main__form-dataStart-wrap
+          label.main__form-lable.input_title(for="dataStart") прибытие
+          input#dataStart.main__form-inp.input_form(type="date" name="")
+        div
+          label.main__form-lable.input_title(for="dataEnd") выезд
+          input#dataEnd.main__form-inp.input_form(type="date" name="")
+      label.main__form-lable.input_title(for="guests") гости
+      select#guests.main__form-select.input_form.dropdown(name="")
+        option(value="") Сколько гостей
+        option.dropdown__item(value="adults")
+          | взрослые
+          | -
+          | 0
+          | +
+        option.dropdown__item(value="children")
+          | дети
+          | -
+          | 0
+          | +
+        option.dropdown__item(value="baby")
+          | младенцы
+          | -
+          | 0
+          | +
+        option(value="buttons")
+          | очистить
+          | применить
+      a.main__form-btn.form__btn(href="searchRoom.html")
+        | подобрать номер
+        img.main__form-btn-arrow.form__btn-arrow(src=require("../../images/icons/arrow_forward.png") alt="arrow")
+    .main-wrap
+      h3.main-wrap__title
+        | Лучшие номера для вашей работы,
+        br
+        | отдыха и просто вдохновения

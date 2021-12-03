@@ -1,0 +1,128 @@
+.footer {
+    border-top: 1px solid $color-dark_shade_25;
+
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 113px;
+        padding-bottom: 100px;
+
+        &__text {
+            @include Body;
+            color: $color-dark_shade_75;
+            max-width: 260px;
+            margin-top: 20px;
+            margin-right: 40px;
+        }
+
+        &__nav {
+            margin-right: 50px;
+        }
+
+        &__subs {
+            max-width: 260px;
+        }
+
+        &__heading {
+            @include H3;
+            text-transform: uppercase;
+            color: $color-dark_shade_100;
+            margin-bottom: 21px;
+        }
+
+        &__describe-text {
+            @include Body;
+            color: $color-dark_shade_75;
+            margin-bottom: 20px;
+
+        }
+
+        &__item:not(:last-child) {
+                margin-bottom: 20px;
+        }
+
+        &__inp {
+            background: $color-white;
+            border: 1px solid $color-dark_shade_25;
+            box-sizing: border-box;
+            border-radius: 4px;
+            @include Body;
+            color: $color-dark_shade_25;
+            padding: 12px 44px 8px 15px;
+            width: 100%;
+        }
+
+        &__inp-wrap {
+            position: relative;
+        }
+
+        &__btn {
+            position: absolute;
+            background-color: $color-white;
+            padding: 11px 11px;
+            top: 1px;
+            right: 1px;
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $color-dark_shade_25;
+
+        &__text {
+            @include Body;
+            color: $color-dark_shade_75;
+        }
+
+        &__social-network {
+            display: flex;
+            padding: 23px 0;
+
+            &-item:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1190px) {
+    
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 778px;
+        padding: 0 5px;
+    }
+
+    .footer-main {
+        padding: 120px 0 20px;
+
+        &__logo {
+            margin: 0 auto;
+        }
+
+        &__text {
+            display: none
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__subs {
+            display: none;
+        }
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        border-top: none;
+
+        &__social-network {
+            padding-bottom: 120px;
+        }
+    }
+}

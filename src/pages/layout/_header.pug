@@ -1,0 +1,58 @@
+.header
+    .container
+        .header__wrap
+            a.header__logo(href="index.html") 
+                img(src=require("../../images/header/logo.png") alt="logo")
+            .header__nav
+                a.header__nav-link.text(href="https://time100.ru") О нас
+                .header__dropdown
+                    a.header__nav-link.header__dropdown-link.nav-link__arrow.text(href="https://time100.ru") Услуги
+                    .header__dropdown-content
+                        a.header__nav-link.text(href="https://time100.ru") Услуги1
+                        a.header__nav-link.text(href="https://time100.ru") Услуги2
+                        a.header__nav-link.text(href="https://time100.ru") Услуги3
+                a.header__nav-link.text(href="https://time100.ru") Вакансии
+                a.header__nav-link.text(href="https://time100.ru") Новости
+                .header__dropdown
+                    a.header__nav-link.header__dropdown-link.nav-link__arrow.text(href="https://time100.ru") Соглашения
+                    .header__dropdown-content
+                        a.header__nav-link.text(href="https://time100.ru") Соглашения1
+                        a.header__nav-link.text(href="https://time100.ru") Соглашения2
+                        a.header__nav-link.text(href="https://time100.ru") Соглашения3
+            .header__link
+                a.header__link-enter.btn__enter(href="signIn.html") войти
+                a.header__link-registration(href="registration.html") зарегистрироваться
+
+            input#burger(type="checkbox")
+            label.menu__section-burger(for="burger")
+                svg(width="30" height="20" viewBox="0 0 30 23" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z")
+            nav.header__burger-menu.menu-burger
+                .menu-burger__wrap
+                    h2.menu-burger__title.text меню
+                    a.menu-burger__links(href="#")
+                    h3.menu-burger__heading
+                        a.menu-burger__links.text(href="#") о нас
+                    h3.menu-burger__heading.text услуги
+                    ul.menu-burger__list
+                        li.menu-burger__items
+                            a.menu-burger__links.text(href="#") Услуги1
+                        li.menu-burger__items
+                            a.menu-burger__links.text(href="#") Услуги2
+                        li.menu-burger__items
+                            a.menu-burger__links.text(href="#") Услуги3
+                    a.menu-burger__links(href="#")
+                        h3.menu-burger__heading.text вакансии
+                    a.menu-burger__links(href="#")
+                        h3.menu-burger__heading.text новости
+                    h3.menu-burger__heading.text Соглашения
+                    ul.menu-burger__list
+                        li.menu-burger__items
+                            a.menu-burger__links.text(href="#") Соглашения1
+                        li.menu-burger__items
+                            a.menu-burger__links.text(href="#") Соглашения2
+                        li.menu-burger__items
+                            a.menu-burger__links.text(href="#") Соглашения3
+                    .menu-burger__duble
+                        a.menu-burger__duble-btn.header__link-enter.btn__enter(href="signIn.html") войти
+                        a.menu-burger__duble-btn.header__link-registration(href="registration.html") зарегистрироваться

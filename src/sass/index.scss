@@ -1,0 +1,568 @@
+@import "_vars";
+@import "_mixins";
+@import "_main";
+
+@import "_header";
+
+/** index.html **/
+.main {
+    padding: 70px 0 18px;
+    background-image: url(../images/index/index-bgi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__form {
+        max-width: 380px;
+        padding: 40px 30px 30px;
+        background: $color-white;
+        border: 1px solid $color-dark_shade_25;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px $color-dark_shade_25;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 320px;
+
+        &-inp-wrap {
+            margin-bottom: 21px;
+            display: flex;
+        }
+
+        &-dataStart-wrap {
+            margin-right: 20px;
+        }
+
+        &-inp {
+            padding: 11px 0 8px 15px;
+            max-width: 150px;
+        }
+
+        &-select {
+            padding: 11px 0 8px 15px;
+            margin-bottom: 21px;
+        }
+    }
+
+    &-wrap__title {
+        @include Body;
+        text-align: right;
+        color: $color-dark_shade_75;
+    }
+}
+
+/* searchRoom */
+.search-room {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.search-wrap {
+    display: grid;
+    grid-template-columns: 266px 835px;
+    grid-template-areas: 
+        "aside main";
+    justify-content: space-between;
+}
+
+.aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+
+    &__inp_title {
+        margin-top: 30px;
+        padding-left: 0;
+    }
+
+    &__inp {
+        padding: 12px 0 12px 15px;
+        margin-bottom: 20px;
+    }
+
+    &__inp:last-child {
+        margin-bottom: 0;
+    }
+
+    &__extra-btn::after {
+        content: url(../images/icons/arrow_down.png);
+        margin-left: 13px;
+    }
+
+    &__text {
+        @include H3;
+        font-weight: normal;
+        text-transform: lowercase;
+        color: $color-dark_shade_50;
+    }
+
+    &__range-description {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__range {
+        margin-bottom: 14px;
+    }
+
+    &__checkbox-wrap {
+        margin-bottom: 10px;
+    }
+
+    &__checkbox {
+        background: $color-white;
+        border: 1px solid $color-purple;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+
+    /* стилизация checkbox */
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &__checkbox + label {
+        position: relative;
+        padding: 0 0 0 30px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        display: block;
+        user-select: none;
+    }
+    &__checkbox + label:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background: $color-white;
+        border: 1px solid $color-dark_shade_25;
+        transition: 0.2s;
+    }
+    &__checkbox + label:after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        width: 4px;
+        height: 8px;
+        border: 1px solid $color-purple;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        transition: 0.2s;
+        display: none;
+    }
+    &__checkbox:checked + label:before {
+        border: 1px solid $color-purple;
+    }
+    &__checkbox:checked + label:after {
+        display: block;
+    }
+    &__checkbox:focus + label:before {
+        border: 1px solid $color-purple;
+    }
+    
+    &__checkbox {
+        @include Body;
+        color: $color-dark_shade_75;
+    }
+
+    &__checkbox + label > p {
+        margin-top: 5px;
+    }
+
+    &__checkbox_label {
+        @include Body;
+    }
+
+    &__inp_expandable {
+        border: none;
+    }
+}
+
+.rooms {
+    grid-area: main;
+    margin-left: auto;
+
+    &__title {
+        @include H1;
+        color: $color-dark_shade_100;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    gap: 12px;
+    justify-content: end;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.card {
+    background: $color-white;
+    box-shadow: $box-shadow;
+    border-radius: 4px;
+
+    &__wrap-img {
+        position: relative;
+    }
+
+    &__img-arrow-left {
+        position: absolute;
+        color: $color-white;
+        top: 50%;
+        left: 5%;
+    }
+
+    &__img-arrow-right {
+        position: absolute;
+        color: $color-white;
+        top: 50%;
+        right: 5%;
+    }
+
+    &__img {
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    &__slider-nav {
+        position: absolute;
+        top: 85%;
+        right: 5%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        &-item {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 1px solid $color-white;
+
+            &:not(:last-child) {
+                margin-right: 3px;
+            }
+
+            &.active {
+                background-color: $color-white;
+            }
+        }
+    }
+
+    &__description {
+        padding: 20px 0 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        &-room {
+            @include Body;
+            font-weight: bold;
+            color: $color-dark_shade_100;
+            margin-right: 10px;
+        }
+
+        &-type {
+            @include H3;
+            text-transform: uppercase;
+            color: $color-purple;
+            margin-right: 25px;
+        }
+
+        &-hide {
+            display: none;
+        }
+    }
+
+    &__description_line {
+        border-bottom: 1px solid $color-dark_shade_25;
+        position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    &__review {
+        display: flex;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 10px 0 20px 0;
+
+        
+
+        &-stars {
+            margin-right: 22px;
+        }
+
+        &-count {
+            text-align: right;
+        }
+    }
+}
+
+.carouse {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    &_page {
+        @include H3;
+        font-weight: normal;
+        color: $color-dark_shade_50;
+        background:  $color-white;
+        width: 40px;
+        height: 40px;
+    }
+
+    &_one {
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+        border-radius: 22px;
+        color: $color-white;
+    }
+    
+    &-arrow_right {
+        background: linear-gradient(180deg, $color-green 0%, $color-sky_blue 100%);
+        border-radius: 22px;
+    }
+
+    &_arrow-icon {
+        display: block;
+        padding: 11px 11px;
+    }
+
+    &_description {
+        margin-top: 10px;
+        @include Body;
+        color: $color-dark_shade_75;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* roomDetails */
+
+/** registration **/
+.registration {
+    background-image: url(../images/registration/registration-bgi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 20px 0;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 40px 30px 30px;
+        background: $color-white;
+        border: 1px solid $color-dark_shade_50;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px $color-dark_shade_25;
+        border-radius: 4px;
+    }
+
+    &__inp {
+        padding: 13px 0 13px 15px;
+        text-align: start;
+        margin-bottom: 10px;
+    }
+
+    &__radio-wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__radio-inp {
+        background: $color-white;
+        border: 1px solid $color-dark_shade_25;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+        border-radius: 10px;
+        margin-right: 14px;
+    }
+
+    &__radio-label {
+        @include Body;
+        color: $color-dark_shade_75;
+    }
+
+    &__radio-label:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &__label {
+        margin-top: 24px;
+    }
+
+    &__bottom-wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    &__span {
+        @include Body;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $color-black;
+    }
+
+    &__enter {
+        padding: 14px 26px;
+    }
+}
+
+/* Стилизация radiobutton */
+.registration__radio-inp {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px;
+}
+.registration__radio-inp + label {
+    position: relative;
+    padding: 0 0 0 35px;
+    cursor: pointer;
+}
+.registration__radio-inp + label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-dark_shade_25;
+    border-radius: 50%;
+    background: $color-white;
+}
+.registration__radio-inp + label:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 0.2s;
+}
+.registration__radio-inp:checked + label:after {
+    opacity: 1;
+}
+.registration__radio-inp:focus + label:before {
+    border: 1px solid $color-purple;
+}
+
+/* Стилизация checkbox */
+.reg-inp {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+}
+.reg-inp + label {
+    position: relative;
+    padding: 0 0 0 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.reg-inp + label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background: $color-white;
+    border: 1px solid $color-dark_shade_25;
+    transition: 0.2s;
+}
+.reg-inp + label:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background: $color-dark_shade_25;
+    transition: 0.2s;
+}
+.reg-inp:checked + label:before {
+    border: 1px solid $color-purple;
+}
+.reg-inp:checked + label:after {
+    left: 24px;
+    background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+}
+.reg-inp:focus + label:before {
+    border: 1px solid $color-purple;
+}
+
+.reg-lab {
+    @include Body;
+    color: $color-dark_shade_75;
+}
+
+/** signIn **/
+.sign {
+    background-image: url(../images/registration/registration-bgi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 172px 0;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 40px 30px 30px;
+        background: $color-white;
+        border: 1px solid $color-dark_shade_25;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px $color-dark_shade_50;
+        border-radius: 4px;
+    }
+
+    &__inp {
+        padding: 13px 0 13px 15px;
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__bottom-wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    &__span {
+        @include Body;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $color-black;
+    }
+
+    &__enter {
+        padding: 14px 26px;
+    }
+}
+
+@import "_footer";
