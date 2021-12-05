@@ -23,3 +23,10 @@
     font-size: 14px;
     line-height: 24px;
 }
+
+@mixin Body-like {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+}

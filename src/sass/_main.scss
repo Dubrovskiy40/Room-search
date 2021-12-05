@@ -23,12 +23,10 @@ button {
     padding: 0 15px;
 }
 
-
 .text {
     @include Body;
     color: $color-dark_shade_50;
 }
-
 
 .form__title {
     @include H1;
@@ -57,7 +55,7 @@ button {
     text-align: center;
     text-transform: uppercase;
     color: $color-white;
-        background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+    background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
     border-radius: 22px;
     padding: 14px 18px;
     position: relative;
@@ -69,22 +67,7 @@ button {
     }
 }
 
-.btn__enter {
-    @include H3;
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-purple;
-    background: 
-        linear-gradient($color-white, $color-white) padding-box,
-        linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
-    border-radius: 22px;
-    border:2px solid transparent;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px $color-dark_shade_25;
-}
-
 .dropdown {
-
     &__item {
         @include H3;
         text-transform: uppercase;
@@ -116,5 +99,54 @@ button {
         @include H3;
         color: $color-purple;
         text-transform: uppercase;
+    }
+}
+
+.btn__with-filling {
+    @include H3;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+    border-radius: 22px;
+    box-sizing: border-box;
+    position: relative;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &_arrow {
+        position: absolute;
+        right: 10px;
+        top: 12px;
+    }
+}
+.btn__without-filling {
+    @include H3;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-purple;
+    background: 
+        linear-gradient($color-white, $color-white) padding-box,
+        linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
+    border-radius: 22px;
+    border:2px solid transparent;
+    box-sizing: border-box;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 1190px) {
+    .container {
+        max-width: 1100px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 700px;
+        padding: 0 10px;
     }
 }

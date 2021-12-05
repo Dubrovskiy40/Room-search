@@ -30,8 +30,8 @@ main.search-room
                option(value="") 4
             .aside__range-description.aside__inp_title
                label.input_title(for="range") диапазон цены
-               span.aside__text 5 000₽ - 10 000₽
-            input#range.aside__range(type="range" multiple min="0" max="100" step="1" name="" data-values="10 90")
+               input#range.aside__range-description-text.aside__text(type="text" name="" readonly)
+            #slider-range.aside__range
             p.aside__text Стоимость за сутки пребывания в номере
             fieldset.aside__inp_title
                legend.input_title правила дома
@@ -82,18 +82,20 @@ main.search-room
                            .card__slider-nav-item
                            .card__slider-nav-item
                            .card__slider-nav-item
-                     .card__description.card__description_line
-                        p.card__description-room № #{element.numberRoom}
-                        p.card__description-type #{element.typeRoom}
-                        span.card__description-price.text #{element.priceRoom} ₽ в сутки
-                     .card__review
-                        .card__review-stars
-                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
-                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
-                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
-                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
-                           img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
-                        p.card__review-count.text #{element.reviewCount} Отзывов
+                     a.card__link(href="roomDetails.html")
+                        .card__description.card__description_line
+                           p.card__description-room № 
+                              span #{element.numberRoom}
+                           p.card__description-type #{element.typeRoom}
+                           span.card__description-price.text <b>#{element.priceRoom}₽</b> в сутки
+                        .card__review
+                           .card__review-stars
+                              img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                              img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                              img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                              img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                              img.card__review-star(src=require("../../images/searchRoom/star.png") alt="star")
+                           p.card__review-count.text <b>#{element.reviewCount}</b> Отзывов
             nav.carouse
                button.carouse_page.carouse_one(type='button') 1
                button.carouse_page(type='button') 2

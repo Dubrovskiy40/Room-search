@@ -4,9 +4,9 @@ main.sign
             h2.sign__title.form__title Войти
             input#reg.sign__inp.input_form(type="email" name="" placeholder="Email" required)
             input#reg.sign__inp.input_form(type="password" name="" placeholder="Пароль" required)
-            button.sign__btn.form__btn
+            button.sign__btn.btn__with-filling
                 | войти
-                img.main__form-btn-arrow.form__btn-arrow(src=require("../../images/icons/arrow_forward.png") alt="arrow")
+                img.sign__form-btn_arrow.btn__with-filling_arrow(src=require("../../images/icons/arrow_forward.png") alt="arrow")
             .sign__bottom-wrap
                 span.sign__span Нет аккаунта на Toxin?
-                a.sign__enter.btn__enter(href="registration.html") создать
+                a.sign__enter.btn__without-filling(href="registration.html") создать

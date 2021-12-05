@@ -6,3 +6,21 @@ meta(name="keywords" content="отель, отдых, забронировать
 link(rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon")
 link(rel="stylesheet", href="style.css")
 script(src="buindle.js")
+
+link(rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css")
+script(src="https://code.jquery.com/jquery-3.6.0.js")
+script(src="https://code.jquery.com/ui/1.13.0/jquery-ui.js")
+script.
+   $( function() {
+   $( "#slider-range" ).slider({
+   range: true,
+   min: 0,
+   max: 15000,
+   values: [5000, 10000],
+   slide: function(event, ui) {
+   $("#range").val(ui.values[0]+ "₽"  + " - " + ui.values[1] + "₽");
+   }
+   });
+   $("#range").val($("#slider-range").slider( "values", 0) + "₽" +
+   " - " + $("#slider-range").slider("values", 1) + "₽");
+   });

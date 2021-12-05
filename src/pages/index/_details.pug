@@ -9,11 +9,9 @@ main.room-details
             .room-statistics__wrap
               h3.room-statistics__title.comfort Комфорт
               span.room-statistics__text Шумопоглощающие стены
-            hr.room-statistics__line
             .room-statistics__wrap
               h3.room-statistics__title.convenience Удобство
               span.room-statistics__text Окно в каждой из спален
-            hr.room-statistics__line
             .room-statistics__wrap
               h3.room-statistics__title.cosiness Уют
               span.room-statistics__text Номер оснащён каминомн
@@ -32,7 +30,7 @@ main.room-details
               p.guest__review
                 | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
               .guest__favorite
-                img.guest__favorite-img(src="./image/roomDetails/review/favorite.png" alt="icon")
+                img.guest__favorite-img(src=require("../../images/roomDetails/review/favorite.png") alt="icon")
                 span.guest__favorite-count 12
           .reviev-guests__guest
             .guest
@@ -41,7 +39,7 @@ main.room-details
               p.guest__review
                 | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
               .guest__favorite
-                img.guest__favorite-img(src="./image/roomDetails/review/favorite.png" alt="icon")
+                img.guest__favorite-img(src=require("../../images/roomDetails/review/favorite.png") alt="icon")
                 span.guest__favorite-count 2
         .room-regulations
           .room-regulations__wrap.room-regulations__regulations
@@ -58,10 +56,10 @@ main.room-details
               | Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       .room-reserve
         .card__description
-          p.card__description-room
-            b № 888
+          p.card__description-room № 
+            span 888
           p.card__description-type люкс
-          span.card__description-price 9 990₽ в сутки
+          span.card__description-price.text <b>9 990₽</b> в сутки
         .main__form-inp-wrap
           .main__form-dataStart-wrap
             label.main__form-lable.input_title(for="dataStart") прибытие
@@ -77,19 +75,19 @@ main.room-details
           option(value="") 3
           option(value="") 4
         .cost.reserve-order
-          span.cost__change 9 990₽ х 4 суток
-          span.cost__price 39 960₽
+          span.cost__change.reserve-order__text 9 990₽ х 4 суток
+          span.cost__price.reserve-order__price 39 960₽
         .service-fee.reserve-order
-          p.service-fee__text Сбор за услуги: скидка 2 179₽
-          button.service-fee__btn i
-          span.service-fee__price 0₽
+          p.service-fee__text.reserve-order__text Сбор за услуги: скидка 2 179₽
+          button.service-fee__btn.reserve-order__btn i
+          span.service-fee__price.reserve-order__price 0₽
         .additional-fee.reserve-order
-          p.additional-fee__text Сбор за дополнительные услуги
-          button.additional-fee__btn i
-          span.additional-fee__price 300₽
-        .total
-          span.total__text Итого
-          span.total__price 38 081₽
-        button.form__btn
+          p.additional-fee__text.reserve-order__text Сбор за дополнительные услуги
+          button.additional-fee__btn.reserve-order__btn i
+          span.additional-fee__price.reserve-order__price 300₽
+        ul.total
+          li.total__text Итого
+            span.total__price 38 081₽
+        button.room-reserve__btn.btn__with-filling
           | забронировать
-          img.form__btn-arrow(src="./image/icons/arrow_forward.png" alt="arrow")
+          img.room-reserve__btn_arrow.btn__with-filling_arrow(src=require("../../images/icons/arrow_forward.png") alt="arrow")

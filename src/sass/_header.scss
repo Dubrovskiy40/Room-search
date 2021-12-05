@@ -61,10 +61,6 @@
    }
 
    &__link-registration {
-      @include H3;
-      color: $color-white;
-      background: linear-gradient(180deg, $color-purple 0%, $color-blue 100%);
-      border-radius: 22px;
       padding: 10px 20px;
    }
 }

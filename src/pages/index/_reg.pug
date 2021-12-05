@@ -16,9 +16,9 @@ main.registration
             input#reg.registration__inp.input_form(type="password" name="" placeholder="Пароль" required)
             input#checkbox.reg-inp(type="checkbox" name="")
             label.reg-lab(for="checkbox") Получать спецпредложения
-            button.registration__btn.form__btn
+            button.registration__btn.btn__with-filling(type="button")
                 | зарегистрироваться
-                img.main__form-btn-arrow.form__btn-arrow(src=require("../../images/icons/arrow_forward.png") alt="arrow")
+                img.registration__form-btn_arrow.btn__with-filling_arrow(src=require("../../images/icons/arrow_forward.png") alt="arrow")
             .registration__bottom-wrap
                 span.registration__span Уже есть аккаунт на Toxin
-                a.registration__enter.btn__enter(href="signIn.html") войти
+                a.registration__enter.btn__without-filling(href="signIn.html") войти
